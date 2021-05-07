@@ -28,3 +28,9 @@ Aplicativo web para controlar a agenda de consulta dos pacientes de uma clinica 
 * JQuery
 * Bootstrap
 
+## SQL - Banco de dados
+```sql
+CREATE DATABASE BD_CONSULTORIO CHARACTER SET utf8 COLLATE utf8_general_ci;
+```
+
+### Criação de tabela médicos
