@@ -30,7 +30,8 @@
         echo "<td>{$medico['telefone']}</td>";
         echo "<td>{$medico['crm']}</td>"; 
         echo "<td>{$medico['especialidade']}</td>";
-        echo "<td>Alterar | Excluir</td>";
+        echo "<td><a href='medicos-formulario-alterar.php?id_medico={$medico['id']}'>Alterar</a> | 
+        <a href='medicos-excluir.php?id_medico={$medico['id']}'>Excluir</a></td>";
         echo "</tr>";
     }
     ?>
