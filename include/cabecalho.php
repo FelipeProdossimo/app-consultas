@@ -23,7 +23,7 @@
                     <a href="../medicos/medicos-listar.php" class="btn btn-outline-info" style="width: 400px;"><img src="../img/medico.png" >Cadastro de médicos</a>
                 </div>
                 <div class="col">
-                    <a href="#" class="btn btn-outline-info" style="width: 400px;"><img src="../img/paciente.png">Cadastro de pacientes</a>
+                    <a href="../pacientes/pacientes-listar.php" class="btn btn-outline-info" style="width: 400px;"><img src="../img/paciente.png">Cadastro de pacientes</a>
                 </div>
                 <div class="col">
                     <a href="#" class="btn btn-outline-info" style="width: 400px;"><img src="../img/calendario.png">Agendamento de consulta</a>

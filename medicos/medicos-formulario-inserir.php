@@ -19,7 +19,7 @@
                 </select>
             </b>
             <b>
-                <button type="subtmit" class="btn btn-primary btn-lg">Salvar</button>
+                <button type="submit" class="btn btn-primary btn-lg">Salvar</button>
             </b>
         </form>
     </div>

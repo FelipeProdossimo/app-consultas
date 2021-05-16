@@ -42,17 +42,20 @@ while($medico = mysqli_fetch_assoc($listaDeMedicos)){
                 <label class="form-label">Especialidade:</label>
                 <select name="especialidade" class="form-select form-select-lg mb-3">
 
-                    <option value="Cardiologista" <?php if($especialidade == 'Cardiologista'){ echo "selected "; }
+                    <option value="Cardiologista" <?php if($especialidade == 'Cardiologista')
+                    { echo "selected "; }
                     ?>>Cardiologista</option>
 
-                    <option value="Nutricionista <?php if($especialidade == 'Nutricionista'){ echo "selected "; }
+                    <option value="Nutricionista <?php if($especialidade == 'Nutricionista')
+                    { echo "selected "; }
                     ?>">Nutricionista</option>
-                    <option value="Ortopedista" <?php if($especialidade == 'Ortopedista'){ echo "selected "; }
+                    <option value="Ortopedista" <?php if($especialidade == 'Ortopedista')
+                    { echo "selected "; }
                     ?>>Ortopedista</option>
                 </select>
             </b>
             <b>
-                <button type="subtmit" class="btn btn-primary btn-lg">Salvar</button>
+                <button type="submit" class="btn btn-primary btn-lg">Salvar</button>
             </b>
         </form>
     </div>

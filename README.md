@@ -49,4 +49,16 @@ CREATE TABLE `bd_consultorio`.`tb_medicos` (
      PRIMARY KEY (`id`)
      )
      ENGINE = InnoDB;
+
+CREATE TABLE `bd_consultorio`.`tb_pacientes` ( 
+    `id` INT(11) NOT NULL , 
+    `nome` VARCHAR(100) NOT NULL , 
+    `telefone` VARCHAR(20) NOT NULL , 
+    `nascimento` DATE NOT NULL ) ENG;
+
+    ALTER TABLE `tb_pacientes` CHANGE `id` 
+    `id` INT(11) NOT NULL AUTO_INCREMENT, 
+    add PRIMARY KEY (`id`);
+
+    ALTER TABLE `tb_pacientes` ADD `cpf` INT(15) NOT NULL AFTER `id`;
 ```

@@ -2,7 +2,8 @@
 <h4 class="text-center fw-bold">Listagem de médicos</h4>
 <hr>
 <p>
-<a href="../medicos/medicos-formulario-inserir.php" class="btn btn-outline-danger mx-auto" style="width: 200px;">Novo Médico</a></button>
+<a href="../medicos/medicos-formulario-inserir.php" class="btn btn-outline-danger mx-auto" 
+style="width: 200px;">Novo Médico</a></button>
 </p>
 
 <?php
