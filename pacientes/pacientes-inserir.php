@@ -7,7 +7,7 @@ $telefone = $_POST['telefone'];
 $nascimento = $_POST['nascimento'];
 
 include "../include/conexao.php";
-$sqlInserir = "INSERT INTO tb_pacientes(id, cpf, nome, telefone, nascimento) values('{$id_paciente}' , '{$cpf}' ,'{$nome}' , '{$telefone}' , '{$nascimento}');";
+$sqlInserir = "INSERT INTO tb_pacientes(cpf, nome, telefone, nascimento) values('{$cpf}' ,'{$nome}' , '{$telefone}' , '{$nascimento}');";
 
 $resultado = mysqli_query($conexao, $sqlInserir);
 
