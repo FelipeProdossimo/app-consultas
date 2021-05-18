@@ -40,7 +40,8 @@ while($paciente = mysqli_fetch_assoc($listaDePacientes)){
             </div>
             <div class="col">
                 <label class="form-label">Nascimento:</label>
-                <input name="nascimento" class="form-control" 
+                <input id="nascimento" name="nascimento"
+                 class="form-control" 
                 value="<?php echo $nascimento; ?>">
                 <button type="submit" class="btn btn-primary btn-lg">Salvar</button>
             </div>

@@ -16,7 +16,8 @@
                 </div>
                 <div class="col">
                     <label class="form-label">Data de Nascimento:</label>
-                    <input class="form-control text-center" id="nascimento" name="nascimento" type="date">
+                    <input class="form-control text-center" id="nascimento" placeholder="DD/MM/AAAA" 
+                    name="nascimento" type="date">
                     <button type="submit" class="btn btn-primary btn-lg">Salvar</button>
                 </div>
             </form>
