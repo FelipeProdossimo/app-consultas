@@ -19,26 +19,26 @@ while($medico = mysqli_fetch_assoc($listaDeMedicos)){
 ?>
 
 
-    <div class="mb-3">
-        <form class=text-center name="formulario-inserir-medicos" action="medicos-alterar.php" method="post">
-            
+<div class="container">
+    <div class="row">
+        <form class=text-center name="formulario-inserir-medicos" action="medicos-alterar.php" method="post"> 
             <input name="id_medico" type="hidden" value="<?php echo $id_medico;?>">
-            <b>
+            <div class="col">
                 <label class="form-label">Nome:</label>
                 <input name="nome" class="form-control" 
                 value="<?php echo $nome;?>">
-            </b>
-            <b>
+            </div>
+            <div class="col">
                 <label class="form-label">Telefone:</label>
                 <input name="telefone" class="form-control"
                 value="<?php echo $telefone;?>">
-            </b>
-            <b>
+            </div>
+            <div class="col">
                 <label class="form-label">CRM:</label>
                 <input name="crm" class="form-control" 
                 value="<?php echo $crm; ?>">
-            </b>
-            <b>
+            </div>
+            <div class="col">
                 <label class="form-label">Especialidade:</label>
                 <select name="especialidade" class="form-select form-select-lg mb-3">
 
@@ -46,17 +46,16 @@ while($medico = mysqli_fetch_assoc($listaDeMedicos)){
                     { echo "selected "; }
                     ?>>Cardiologista</option>
 
-                    <option value="Nutricionista <?php if($especialidade == 'Nutricionista')
+                    <option value="Nutricionista" <?php if($especialidade == 'Nutricionista')
                     { echo "selected "; }
-                    ?>">Nutricionista</option>
+                    ?>>Nutricionista</option>
                     <option value="Ortopedista" <?php if($especialidade == 'Ortopedista')
                     { echo "selected "; }
                     ?>>Ortopedista</option>
                 </select>
-            </b>
-            <b>
                 <button type="submit" class="btn btn-primary btn-lg">Salvar</button>
-            </b>
+            </div>
         </form>
     </div>
+</div>
 <?php include "../include/rodape.php"; ?>

@@ -19,33 +19,33 @@ while($paciente = mysqli_fetch_assoc($listaDePacientes)){
 ?>
 
 
-    <div class="mb-3">
-        <form class=text-center name="formulario-inserir-pacientes" action="pacientes-alterar.php" method="post">
-            
+<div class="container">
+    <div class="row">
+        <form class=text-center name="formulario-inserir-pacientes" action="pacientes-alterar.php" method="post">    
             <input name="id_paciente" type="hidden" value="<?php echo $id_paciente;?>">
-            <b>
+            <div class="col">
                 <label class="form-label">CPF:</label>
                 <input name="cpf" class="form-control" 
                 value="<?php echo $cpf; ?>">
-            </b>
-            <b>
+            </div>
+            <div class="col">
                 <label class="form-label">Nome:</label>
                 <input name="nome" class="form-control" 
                 value="<?php echo $nome;?>">
-            </b>
-            <b>
+            </div>
+            <div class="col">
                 <label class="form-label">Telefone:</label>
                 <input name="telefone" class="form-control"
                 value="<?php echo $telefone;?>">
-            </b>
-            <b>
+            </div>
+            <div class="col">
                 <label class="form-label">Nascimento:</label>
-                <input name="nascimento" class="form-control" 
+                <input id="nascimento" name="nascimento"
+                 class="form-control" 
                 value="<?php echo $nascimento; ?>">
-            </b>
-            <b>
                 <button type="submit" class="btn btn-primary btn-lg">Salvar</button>
-            </b>
+            </div>
         </form>
     </div>
+</div>
 <?php include "../include/rodape.php"; ?>
