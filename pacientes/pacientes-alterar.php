@@ -1,18 +1,28 @@
 <?php 
 include "../include/conexao.php";
 
-$cpf = $_POST['cpf'];
+$id_paciente = $_POST['id_paciente'];
 $nome = $_POST['nome'];
 $telefone = $_POST['telefone'];
 $nascimento = $_POST['nascimento'];
 
-$sqlAlterar = "UPDATE tb_pacientes set
-    cpf = '{$cpf}' ,
+$convenio = "";
+if(isset($_POST['convenio'])){
+ $convenio = $_POST['convenio'];
+};
+
+$diagnostico = $_POST['diagnostico'];
+
+
+$sqlAlterar = "UPDATE tb_pacientes SET
     nome = '{$nome}' ,
     telefone = '{$telefone}' ,
-    nascimento = '{$nascimento}'
-    WHERE id = {$id_paciente}";
+    nascimento = '{$nascimento}' ,
+    convenio = '{$convenio}' ,
+    diagnostico = '{$diagnostico}'
+    WHERE id = {$id_paciente};";
     
+
 $resultado = mysqli_query($conexao , $sqlAlterar);
 
 if($resultado){

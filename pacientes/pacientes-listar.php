@@ -12,26 +12,27 @@
     $listaDePacientes = mysqli_query($conexao , $sqlBusca);
 
 ?>
-<table class="table table-dark table-striped text-center">
+<table class="table table-dark table-hover text-center">
     <tr>
-        <th>ID</th>
-        <th>CPF</th>
-        <th>Nome</th>
-        <th>Telefone</th>
-        <th>Nascimento</th>
-        <th>Ações</th>
+        <td>ID</th>
+        <td>Nome</th>
+        <td>Telefone</th>
+        <td>Data de nascimento</th>
+        <td>Convênio</th>
+        <td>Ações</th>
     </tr>
     <?php 
 
     while($paciente = mysqli_fetch_assoc($listaDePacientes)){
         echo "<tr>";
-        echo "<tr>{$paciente['id']}</td>";
-        echo "<td>{$paciente['cpf']}</td>";
+        echo "<td>{$paciente['id']}</td>";
         echo "<td>{$paciente['nome']}</td>";
         echo "<td>{$paciente['telefone']}</td>";
-        echo "<td>{$paciente['nascimento']}</td>";
-        echo "<td><a href='pacientes-formulario-alterar.php?id_paciente={$paciente['id']}'>Alterar</a> | 
-        <a href='pacientes-excluir.php?id_paciente={$paciente['id']}'>Excluir</a></td>";
+        $dataBrasil = date('d/m/Y', strtotime ($paciente['nascimento']));
+        echo "<td>{$dataBrasil}</td>";
+        echo "<td>{$paciente['convenio']}</td>";
+        echo "<td><a href='pacientes-formulario-alterar.php?id={$paciente['id']}'>Alterar</a> | 
+        <a href='pacientes-excluir.php?id={$paciente['id']}'>Excluir</a></td>";
         echo "</tr>";
     }
     ?>
