@@ -26,7 +26,7 @@
                     <a href="../pacientes/pacientes-listar.php" class="btn btn-outline-info" style="width: 400px;"><img src="../img/paciente.png">Cadastro de pacientes</a>
                 </div>
                 <div class="col">
-                    <a href="#" class="btn btn-outline-info" style="width: 400px;"><img src="../img/calendario.png">Agendamento de consulta</a>
+                    <a href="../agenda/agenda-listar.php" class="btn btn-outline-info" style="width: 400px;"><img src="../img/calendario.png">Agendamento de consulta</a>
                 </div>
             </div>
         </div>
