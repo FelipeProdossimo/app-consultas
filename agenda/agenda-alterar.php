@@ -20,7 +20,7 @@ $resultado = mysqli_query($conexao , $sqlAlterar);
 
 if($resultado){
     echo "Alterado com sucesso!<br>";
-    echo "<a href='agenda-listar.php'>Voltar</a>";
+    echo "<a class='btn btn-outline-danger position-absolute top-50 start-50 translate-middle' href='agenda-listar.php'>Voltar</a>";
 }else{
     echo "Ocorreu algum erro";
 }

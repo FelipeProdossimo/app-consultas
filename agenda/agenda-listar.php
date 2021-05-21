@@ -15,8 +15,16 @@ inner join tb_medicos on tb_agenda.id_medico = tb_medicos.id";
 
 $listaDeAgenda = mysqli_query($conexao , $sqlBusca);
 ?>
-<a href="agenda-formulario-inserir.php" class="btn btn-outline-danger mx-auto" 
-style="width: 200px;">Nova consulta</a>
+
+<div class="container text-align">
+    <div class="row">
+        <div class="col">
+            <a href="agenda-formulario-inserir.php" class="btn btn-outline-danger mx-auto" 
+            style="width: 200px;"><span class='material-icons'>
+            add_circle_outline
+            </span>
+            </a>
+        
 <table class="table table-hover">
     <tr>
         <th>ID</th>
@@ -38,10 +46,19 @@ style="width: 200px;">Nova consulta</a>
         echo "<td>{$agenda['nome_medico']}</td>";
         echo "<td>{$agenda['sala']}</td>";
         echo "<td>{$agenda['nome_paciente']}</td>";
-        echo "<td><a href='agenda-formulario-alterar.php?id={$agenda['id']}'>Alterar | 
-        <a href='agenda-excluir.php?id={$agenda['id']}'>Excluir</td>";
+        echo "<td><a class='btn btn-outline-success' href='agenda-formulario-alterar.php?id={$agenda['id']}'><span class='material-icons'>
+        settings
+        </span></a> | ";
+        echo "<a class='btn btn-outline-danger' href='agenda-excluir.php?id={$agenda['id']}'><span class='material-icons'>
+        delete
+        </span></a></td>";
         echo "</tr>";
     }
     ?>
 </table>
+
+        </div>
+    </div>
+</div>
 <?php include "../include/rodape.php" ; ?>
+
