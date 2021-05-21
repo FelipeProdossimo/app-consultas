@@ -14,5 +14,4 @@ if($resultado){
 }else{
     echo "Ocorreu algum problema";
 }
-
 ?>

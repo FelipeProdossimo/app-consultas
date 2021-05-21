@@ -44,7 +44,4 @@ style="width: 200px;">Nova consulta</a>
     }
     ?>
 </table>
-
-
-
 <?php include "../include/rodape.php" ; ?>

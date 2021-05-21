@@ -50,9 +50,5 @@
     <p>
         <button type="submit">Salvar</button>
     </p>
-
 </form>
-
-
-
 <?php include "../include/rodape.php" ?>
