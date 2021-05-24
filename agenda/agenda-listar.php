@@ -1,4 +1,7 @@
+<div class="container text-align">
+
 <?php include "../include/cabecalho.php"; ?>
+<h4 class="text-center fw-bold">Listagem da agenda</h4>
 
 <?php 
 include "../include/conexao.php" ;
@@ -15,48 +18,43 @@ inner join tb_medicos on tb_agenda.id_medico = tb_medicos.id";
 
 $listaDeAgenda = mysqli_query($conexao , $sqlBusca);
 ?>
+<hr>
 
-<div class="container text-align">
     <div class="row">
-        <div class="col">
-            <a href="agenda-formulario-inserir.php" class="btn btn-outline-danger mx-auto" 
-            style="width: 200px;"><span class='material-icons'>
-            add_circle_outline
-            </span>
+        <div class="col text-center">
+            <a href="agenda-formulario-inserir.php" class="btn btn-outline-warning mx-auto" 
+            style="width: 200px;"><i class="bi bi-plus-circle-dotted"></i> Nova Consulta
             </a>
-        
-<table class="table table-hover">
-    <tr>
-        <th>ID</th>
-        <th>Data</th>
-        <th>Hora</th>
-        <th>Médico</th>
-        <th>Sala</th>
-        <th>Paciente</th>
-        <th>Ações</th>
-    </tr>
-    <?php 
+            <hr>
+            <table class="table table-hover text-center">
+                <tr>
+                    <th class="fw-bold">ID</th>
+                    <th class="fw-bold">Data</th>
+                    <th class="fw-bold">Hora</th>
+                    <th class="fw-bold">Médico</th>
+                    <th class="fw-bold">Sala</th>
+                    <th class="fw-bold">Paciente</th>
+                    <th class="fw-bold">Ações</th>
+                </tr>
+                <?php 
 
-    while($agenda = mysqli_fetch_assoc($listaDeAgenda)){
-        echo "<tr>";
-        echo "<td>{$agenda['id']}</td>";
-        $dataBrasil = date('d/m/Y', strtotime ($agenda['data']));
-        echo "<td>{$dataBrasil}</td>";
-        echo "<td>{$agenda['hora']}</td>";
-        echo "<td>{$agenda['nome_medico']}</td>";
-        echo "<td>{$agenda['sala']}</td>";
-        echo "<td>{$agenda['nome_paciente']}</td>";
-        echo "<td><a class='btn btn-outline-success' href='agenda-formulario-alterar.php?id={$agenda['id']}'><span class='material-icons'>
-        settings
-        </span></a> | ";
-        echo "<a class='btn btn-outline-danger' href='agenda-excluir.php?id={$agenda['id']}'><span class='material-icons'>
-        delete
-        </span></a></td>";
-        echo "</tr>";
-    }
-    ?>
-</table>
-
+                while($agenda = mysqli_fetch_assoc($listaDeAgenda)){
+                    echo "<tr>";
+                    echo "<td>{$agenda['id']}</td>";
+                    $dataBrasil = date('d/m/Y', strtotime ($agenda['data']));
+                    echo "<td>{$dataBrasil}</td>";
+                    echo "<td>{$agenda['hora']}</td>";
+                    echo "<td>{$agenda['nome_medico']}</td>";
+                    echo "<td>{$agenda['sala']}</td>";
+                    echo "<td>{$agenda['nome_paciente']}</td>";
+                    echo "<td><a class='btn btn-outline-success' href='agenda-formulario-alterar.php?id={$agenda['id']}'>
+                    <i class='bi bi-pen'></i>
+                    </a> | <a class='btn btn-outline-danger' href='agenda-excluir.php?id={$agenda['id']}'>
+                    <i class='bi bi-x-lg'></i></a></td>";
+                    echo "</tr>";
+                }
+                ?>
+            </table>
         </div>
     </div>
 </div>

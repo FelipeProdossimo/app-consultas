@@ -18,7 +18,7 @@ $resultado = mysqli_query($conexao , $sqlAlterar);
 
 if($resultado){
     echo "Alterado com sucesso!<br>";
-    echo "<a href='medicos-listar.php'>Voltar</a>";
+    echo "<a href='medicos-listar.php'><i class='bi bi-arrow-left'>Voltar</a>";
 }else{
     echo "Ocorreu algum erro";
 }

@@ -12,7 +12,7 @@ $resultado = mysqli_query($conexao, $sqlInserir);
 
 if($resultado){
     echo "Médico foi inserido com sucesso!<br>";
-    echo "<a href='medicos-listar.php'>Retornar</a>";
+    echo "<a class='btn btn-outline-dark' href='medicos-listar.php'><i class='bi bi-arrow-left'></i>Retornar</a>";
 }else{
     echo "Ops, ocorreu um erro!";
 }

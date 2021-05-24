@@ -1,4 +1,4 @@
-    <footer class="position-absolute top-100 start-50 translate-middle">
+    <footer class="fixed-bottom text-center">
             &copy; Todos os direitos reservados
     </footer>
     </main>

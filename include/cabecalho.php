@@ -7,16 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Consultas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
 </head>
 
 <body>
     <main class="container-fluid">
         
         <header>
-            <h1 class="text-center">APP Consultas</h1>
+            <h1 class="text-center">APP CONSULTÓRIO</h1>
             <hr>
         </header>
         <div class="container text-align">

@@ -1,5 +1,9 @@
+<hr>
+<div class= "container text-center">
 <?php
 
+include "../include/cabecalho.php";
+echo "<hr>";
 $data = $_POST['data'];
 $hora = $_POST['hora'];
 $id_medico = $_POST['id_medico'];
@@ -23,8 +27,11 @@ $resultado = mysqli_query($conexao, $sqlInserir);
 
 if($resultado){
     echo "Agendado com sucesso!<br>";
-    echo "<a href='agenda-listar.php'>Retornar</a>";
+    echo "<a class='btn btn-outline-dark' href='agenda-listar.php'><i class='bi bi-arrow-left'></i>Retornar</a>";
 }else{
     echo "Ops, ocorreu um erro!";
 }
+
 ?>
+
+</div>
