@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # App Consultas
 
 ## Miro com a documentação do projeto
@@ -96,8 +95,4 @@ Limitadores para a tabela `tb_agenda`
 ALTER TABLE `tb_agenda`
   ADD CONSTRAINT `fk_agenda_medico` FOREIGN KEY (`id_medico`) REFERENCES `tb_medicos` (`id`),
   ADD CONSTRAINT `fk_agenda_paciente` FOREIGN KEY (`id_paciente`) REFERENCES `tb_pacientes` (`id`);
-
-Criação tb_usuario
-
-CREATE TABLE `bd_consultorio`.`tb_usuario` ( `id` INT NOT NULL AUTO_INCREMENT , `usuario` VARCHAR(50) NOT NULL , `email` VARCHAR(50) NOT NULL , `senha` VARCHAR(70) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
-```
+  ```
