@@ -1,58 +1,15 @@
 <div class="container text-align">
 
-<?php include "../include/cabecalho.php"; ?>
-<br>
-<h4 class="text-center fw-bold">Listagem de pacientes</h4>
-<br>
+    <?php include "../include/cabecalho.php"; ?>
 
-<?php 
-if(isset($_GET['mensagem'])){
-    if($_GET['mensagem'] == 'cadastrado'){
-    ?>
-    <div class="alert alert-info text-center" role="alert">
-        Cadastrado com sucesso!
-    </div>
-
-
-    <?php
-    }      
-        if($_GET['mensagem'] == 'excluido'){ 
-    ?>
-        <div class="alert alert-danger text-center" role="alert">
-        Excluído totalmente!
-    </div>
-
-    <?php 
-        }
-        if($_GET['mensagem'] == 'alterado'){
-    ?>
-        <div class="alert alert-warning text-center" role="alert">
-            Linha escolhida foi modificada pelo usuário!!
-        </div>
-
-    <?php
-        }
-    ?>
-    <?php 
-    }
-?>
-    <form action="pacientes-pesquisa.php" method="POST">
-        <div class="mb-3">
-            <input type="text" class="form-control" name="nome_paciente" placeholder="Insira o nome do paciente">
-            <button type="submit" class="btn btn-success btn-lg">Buscar</button>
-        </div>
-    </form>
-
+    <hr>
     <div class="row">
         <div class="col text-center">
-            <a href="../pacientes/pacientes-formulario-inserir.php" class="btn btn-outline-warning mx-auto" 
-            style="width: 200px";>
-            <i class="bi bi-plus-circle-dotted"></i> Novo Paciente</a>
-            <hr>
         <?php
+            $nome_paciente = $_POST['nome_paciente'];
 
             include "../include/conexao.php";
-            $sqlBusca = "SELECT * FROM tb_pacientes;";
+            $sqlBusca = "SELECT * FROM tb_pacientes WHERE nome LIKE '%$nome_paciente%' LIMIT 5";
             $listaDePacientes = mysqli_query($conexao , $sqlBusca);
 
         ?>
@@ -84,10 +41,10 @@ if(isset($_GET['mensagem'])){
                 echo "</tr>";
             }
             ?>
-        </table>
+            </table>
 
 
         </div>
     </div>
 </div>
-    <?php include "../include/rodape.php"; ?>
+<?php include "../include/rodape.php"; ?>

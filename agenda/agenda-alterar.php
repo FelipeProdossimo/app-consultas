@@ -19,8 +19,7 @@ WHERE tb_agenda.id = {$id}";
 $resultado = mysqli_query($conexao , $sqlAlterar);
 
 if($resultado){
-    echo "Alterado com sucesso!<br>";
-    echo "<a class='btn btn-outline-danger position-absolute top-50 start-50 translate-middle' href='agenda-listar.php'>Voltar</a>";
+    header('Location:agenda-listar.php?mensagem=alterado');
 }else{
     echo "Ocorreu algum erro";
 }

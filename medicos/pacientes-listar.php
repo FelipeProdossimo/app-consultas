@@ -1,9 +1,8 @@
 <div class="container text-align">
 
 <?php include "../include/cabecalho.php"; ?>
-<br>
 <h4 class="text-center fw-bold">Listagem de pacientes</h4>
-<br>
+<hr>
 
 <?php 
 if(isset($_GET['mensagem'])){
@@ -36,12 +35,7 @@ if(isset($_GET['mensagem'])){
     <?php 
     }
 ?>
-    <form action="pacientes-pesquisa.php" method="POST">
-        <div class="mb-3">
-            <input type="text" class="form-control" name="nome_paciente" placeholder="Insira o nome do paciente">
-            <button type="submit" class="btn btn-success btn-lg">Buscar</button>
-        </div>
-    </form>
+
 
     <div class="row">
         <div class="col text-center">
@@ -58,7 +52,6 @@ if(isset($_GET['mensagem'])){
         ?>
         <table class="table table-hover text-center">
             <tr>
-                <td class="fw-bold img-thumbnail">Foto</td>
                 <td class="fw-bold">ID</th>
                 <td class="fw-bold">Nome</th>
                 <td class="fw-bold">Telefone</th>
@@ -70,7 +63,6 @@ if(isset($_GET['mensagem'])){
 
             while($paciente = mysqli_fetch_assoc($listaDePacientes)){
                 echo "<tr>";
-                echo "<td><img src='{$paciente['foto']}'></td>";
                 echo "<td>{$paciente['id']}</td>";
                 echo "<td>{$paciente['nome']}</td>";
                 echo "<td>{$paciente['telefone']}</td>";

@@ -3,7 +3,37 @@
 <?php include "../include/cabecalho.php"; ?>
 <h4 class="text-center fw-bold">Listagem de médicos</h4>
 <hr>
+<?php 
+if(isset($_GET['mensagem'])){
+    if($_GET['mensagem'] == 'cadastrado'){
+    ?>
+    <div class="alert alert-info text-center" role="alert">
+        Cadastrado com sucesso!
+    </div>
 
+
+    <?php
+    }      
+        if($_GET['mensagem'] == 'excluido'){ 
+    ?>
+        <div class="alert alert-danger text-center" role="alert">
+        Excluído totalmente!
+    </div>
+
+    <?php 
+        }
+        if($_GET['mensagem'] == 'alterado'){
+    ?>
+        <div class="alert alert-warning text-center" role="alert">
+            Linha escolhida foi modificada pelo usuário!!
+        </div>
+
+    <?php
+        }
+    ?>
+    <?php 
+    }
+?>
     <div class="row">
         <div class="col text-center">
             <a href="../medicos/medicos-formulario-inserir.php" class="btn btn-outline-warning mx-auto text-center" 

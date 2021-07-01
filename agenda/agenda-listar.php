@@ -2,6 +2,39 @@
 
 <?php include "../include/cabecalho.php"; ?>
 <h4 class="text-center fw-bold">Listagem da agenda</h4>
+<hr>
+
+<?php 
+if(isset($_GET['mensagem'])){
+    if($_GET['mensagem'] == 'cadastrado'){
+    ?>
+    <div class="alert alert-info text-center" role="alert">
+        Cadastrado com sucesso!
+    </div>
+
+
+    <?php
+    }      
+        if($_GET['mensagem'] == 'excluido'){ 
+    ?>
+        <div class="alert alert-danger text-center" role="alert">
+        Excluído totalmente!
+    </div>
+
+    <?php 
+        }
+        if($_GET['mensagem'] == 'alterado'){
+    ?>
+        <div class="alert alert-warning text-center" role="alert">
+            Linha escolhida foi modificada pelo usuário!!
+        </div>
+
+    <?php
+        }
+    ?>
+    <?php 
+    }
+?>
 
 <?php 
 include "../include/conexao.php" ;
@@ -18,7 +51,7 @@ inner join tb_medicos on tb_agenda.id_medico = tb_medicos.id";
 
 $listaDeAgenda = mysqli_query($conexao , $sqlBusca);
 ?>
-<hr>
+
 
     <div class="row">
         <div class="col text-center">

@@ -26,8 +26,7 @@ VALUES (
 $resultado = mysqli_query($conexao, $sqlInserir);
 
 if($resultado){
-    echo "Agendado com sucesso!<br>";
-    echo "<a class='btn btn-outline-dark' href='agenda-listar.php'><i class='bi bi-arrow-left'></i>Retornar</a>";
+    header('Location:agenda-listar.php?mensagem=cadastrado');
 }else{
     echo "Ops, ocorreu um erro!";
 }
